@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Jay Chiarella"
-title: "Builder"
+title: "Cofounder / CEO"
 avatar: {
     src: "/jay.png",
     alt: "Jay Chiarella"

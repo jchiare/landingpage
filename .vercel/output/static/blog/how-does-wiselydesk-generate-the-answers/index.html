@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="/favicon.png?">
+    <meta name="generator" content="Astro v2.1.3">
+    <script defer data-domain="wiselydesk.com" src="https://plausible.io/js/script.js"></script>
+    <title>How does WiselyDesk generate the answers? | WiselyDesk</title>
+
+
+
+<link rel="canonical" href="https://wiselydesk.com/blog/how-does-wiselydesk-generate-the-answers/">
+
+<meta name="description" content="Supercharge your Zendesk help center.">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="WiselyDesk - helpful AI chat for Zendesk help center">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://wiselydesk.com/opengraph.png">
+<meta property="og:url" content="https://wiselydesk.com/blog/how-does-wiselydesk-generate-the-answers/">
+
+<meta property="og:image:url" content="https://wiselydesk.com/opengraph.png">
+
+
+
+<meta property="og:image:height">
+<meta property="og:image:alt" content="WiselyDesk Landing Page Screenshot">
+
+<meta name="twitter:card" content="summary_large_image">
+
+
+
+
+
+<meta name="twitter:creator" content="@wiselydesk">
+
+  <link rel="stylesheet" href="/_astro/404.e319b335.css" />
+<link rel="stylesheet" href="/_astro/404.7c272a42.css" /><script type="module">document.addEventListener("DOMContentLoaded",function(){document.getElementById("astronav-menu").addEventListener("click",()=>{[...document.querySelectorAll(".astronav-toggle")].forEach(e=>{e.classList.toggle("hidden")})});const o=document.querySelectorAll(".astronav-dropdown");o.forEach(e=>{const r=e.querySelector("button");r.addEventListener("click",n=>{e.classList.toggle("open"),e.setAttribute("aria-expanded",e.getAttribute("aria-expanded")==="true"?"false":"true"),e.hasAttribute("open")?e.removeAttribute("open"):e.setAttribute("open",""),r.nextElementSibling.classList.toggle("hidden"),Array.from(o).filter(t=>t!==e).forEach(t=>{t.classList.remove("open"),t.removeAttribute("open"),t.setAttribute("aria-expanded","false"),t.querySelector(".dropdown-toggle").classList.add("hidden")}),n.stopPropagation()})}),document.addEventListener("click",()=>{o.forEach(e=>{e.classList.remove("open"),e.removeAttribute("open"),e.setAttribute("aria-expanded","false")}),document.querySelectorAll(".dropdown-toggle").forEach(e=>e.classList.add("hidden"))})});
+</script>
+<script type="module" src="/_astro/page.f978079d.js"></script></head>
+  <body class="h-full text-[#1D2D35] antialiased">
+    <div class="max-w-screen-xl mx-auto px-5">
+  <header class="my-5 flex flex-col items-center justify-between lg:flex-row">
+    <div class="flex w-full items-center justify-between lg:w-auto">
+        <a href="/" class="text-2xl"><span class="font-bold text-slate-800">Wisely</span><span class="text-slate-500">Desk</span>
+        </a>
+        <div class="block lg:hidden">
+          <button id="astronav-menu">
+  
+    <svg fill="currentColor" class="h-4 w-4 text-gray-800" width="24" height="24" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <title>Menu</title>
+      <path class="astronav-toggle hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"></path>
+      <path class="astronav-toggle" fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"></path>
+    </svg>
+  
+</button>
+        </div>
+      </div><nav class="astronav-toggle mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
+    <ul class="flex flex-col lg:flex-row lg:gap-3">
+          <li>
+                    <a href="/demo" class="flex py-2 font-semibold text-gray-600 hover:text-gray-900 lg:px-3">
+                      Demo
+                    </a>
+                  </li><li>
+                    <a href="/pricing" class="flex py-2 text-gray-600 hover:text-gray-900 lg:px-3">
+                      Pricing
+                    </a>
+                  </li><li class="relative">
+  <div class="astronav-dropdown group" aria-expanded="false"><button class="flex w-full items-center gap-1 py-2 text-gray-600 hover:text-gray-900 lg:w-auto lg:px-3">
+      <span>Company</span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="mt-0.5 h-3 w-3 group-open:rotate-180">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+      </svg>
+    </button><div class="dropdown-toggle hidden"><div class="lg:absolute w-full lg:w-48 z-10 lg:left-0 origin-top-left">
+        <div class="flex flex-col px-3 lg:rounded-md lg:border lg:bg-white lg:py-2 lg:shadow">
+          <a href="/about" class="py-1 text-gray-600 hover:text-gray-900">
+                  About
+                </a><a href="/careers" class="py-1 text-gray-600 hover:text-gray-900">
+                  Careers
+                </a><a href="/privacy" class="py-1 text-gray-600 hover:text-gray-900">
+                  Privacy
+                </a>
+        </div>
+      </div></div></div>
+</li><li class="relative">
+  <div class="astronav-dropdown group" aria-expanded="false"><button class="flex w-full items-center gap-1 py-2 text-gray-600 hover:text-gray-900 lg:w-auto lg:px-3">
+      <span>Resources</span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="mt-0.5 h-3 w-3 group-open:rotate-180">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+      </svg>
+    </button><div class="dropdown-toggle hidden"><div class="lg:absolute w-full lg:w-48 z-10 lg:left-0 origin-top-left">
+        <div class="flex flex-col px-3 lg:rounded-md lg:border lg:bg-white lg:py-2 lg:shadow">
+          <a href="/blog" class="py-1 text-gray-600 hover:text-gray-900">
+                  Blog
+                </a>
+        </div>
+      </div></div></div>
+</li><li>
+                    <a href="/contact" class="flex py-2 text-gray-600 hover:text-gray-900 lg:px-3">
+                      Contact
+                    </a>
+                  </li>
+        </ul><div class="mt-3 flex items-center gap-4 lg:hidden">
+          <a href="https://app.wiselydesk.com" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 border-2 border-transparent">
+            Sign In
+          
+</a>
+          <a href="/waitlist" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 w-full px-4 py-2 bg-black text-white hover:bg-gray-800 border-2 border-transparent">Waitlist
+</a>
+        </div>
+</nav>
+
+
+    <div>
+      <div class="hidden items-center gap-4 lg:flex">
+        <a href="https://app.wiselydesk.com" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 border-2 border-transparent">
+          Sign In
+        
+</a>
+        <a href="/waitlist" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-4 py-2 bg-black text-white hover:bg-gray-800 border-2 border-transparent">Waitlist
+</a>
+      </div>
+    </div>
+  </header>
+</div>
+    <div class="max-w-screen-xl mx-auto px-5">
+  <div class="mx-auto mt-14 max-w-[735px]">
+      <span class="text-sm font-medium uppercase tracking-wider text-blue-400">
+        Learning
+      </span>
+      <h1 class="mt-1 text-4xl font-bold lg:text-5xl lg:leading-tight lg:tracking-tight">
+        How does WiselyDesk generate the answers?
+      </h1>
+      <div class="mt-3 flex flex-wrap items-center gap-2 md:flex-nowrap">
+        <span class="text-gray-400">
+          Jay Chiarella
+        </span>
+        <span class="text-gray-400">•</span>
+        <time class="text-gray-400" datetime="2023-03-25T07:39:00.000Z">
+          Mar 25
+        </time>
+        <span class="text-gray-400">•</span>
+        <span class="text-gray-400">
+          3 min read
+        </span>
+        <span class="hidden text-gray-400 md:block">•</span>
+        <div class="flex w-full flex-wrap gap-3 md:w-auto">
+          <span class="text-sm text-gray-500">#answers</span><span class="text-sm text-gray-500">#generative AI</span><span class="text-sm text-gray-500">#how-to-guide</span>
+        </div>
+      </div>
+    </div><div class="prose prose-lg mx-auto mt-6">
+      <p><strong>Intended audience:</strong> Less-technical folks curious to have a simplified understanding of how we <em>(and most generative AI chatbots)</em> generate answers to questions.</p>
+<p>Before we dive in, let’s cover some jargon.</p>
+<h3 id="jargon-explanation">Jargon explanation:</h3>
+<ol>
+<li><strong>Word Embedding</strong>: A column or set of numbers that represents text. Similar text should have similar numbers.</li>
+</ol>
+<p class="text-sm mb-0">Simplified process of <em>word embedding</em> 3 text inputs. Looking at the results, which input is most different?</p>
+<img src="/word-embedder-intro.png" alt="Word Embedding Demo" class="mb-0 rounded mt-1">
+<div class="text-center">
+<sup>If you guessed "I like toast" as the most different, then you are correct!</sup>
+</div>
+<p><em>We oversimplified, so be sure to keep learning :)</em></p>
+<h2 id="two-main-tasks-to-generate-answers">Two main tasks to generate answers:</h2>
+<p class="text-sm italic">WiselyDesk does a lot more than this under the hood. This is a simplified version to get the idea across.</p>
+<h4 id="1-retrieve-and-parse-zendesk-knowledge-base-articles">1) Retrieve and parse Zendesk knowledge base articles:</h4>
+<ul>
+<li>Get all of the Zendesk knowledge base articles, by <a target="_blank" href="https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-">subdomain</a>, using the API.</li>
+<li>Parse relevant information from each article, such as title and content.</li>
+<li>Create word embeddings of each article and save the result.</li>
+</ul>
+<img src="/extract_word_embedding_from_zd.png" alt="Retrieve and parse Zendesk knowledge base articles" class="mb-0 rounded mt-1">
+<div class="text-center">
+<sup>Diagram of task one</sup>
+</div>
+<h4 id="2-generate-a-response-based-on-relevant-articles">2) Generate a response based on relevant articles:</h4>
+<ul>
+<li>Create a word embedding of the question.</li>
+<li>Find the top three articles by comparing similar word embeddings between questions and articles.</li>
+<li>Summarize the intended bot behaviour and attitude. For instance, <em>“Your name is Bestbot, and you are a friendly bot”</em>.</li>
+<li>Combine the summary, relevant articles, and question into one prompt.</li>
+</ul>
+<img src="/combining-prompt-part-2.png" alt="Generate a response based on relevant articles" class="mb-0 rounded mt-1">
+<div class="text-center">
+<sup>Diagram of task two</sup>
+</div>
+<p><strong>And Voila! Once you have the prompt, send it to the AI model to receive an answer!</strong></p>
+<img src="/answer-from-openai-model.png" alt="Semantic Search Explanation" class="mb-0 rounded mt-1">
+<div class="text-center">
+<sup>Answer from OpenAI AI model</sup>
+</div>
+<h3 id="what-ai-model-does-wiselydesk-use">What AI model does WiselyDesk use?</h3>
+<p>We use OpenAI AI models (GPT3.5 and GPT4). We use two third party providers, OpenAI (obviously!), and Microsoft - who has a license to supply OpenAI AI models with their infrastructure. Dual providers allows us to ensure our software runs well even if one provider is having a bad day.</p>
+<h3 id="alternatively-a-more-technical-term">Alternatively, a more technical term:</h3>
+<p>We use retrieval augmentation with memory to generate a completion using LLMs.</p>
+<h3 id="want-to-try-a-simplified-version-yourself">Want to try a simplified version yourself?</h3>
+<p>If you want to try a simplified version of this yourself, then we would be happy to help you get started. We’ll use OpenAI API, Python, and Replit. The later two are free to use, and OpenAI comes with a $5 credit.</p>
+<p><strong>Pre-requisite:</strong></p>
+<ol>
+<li>Basic Python knowledge (Can recommend <a href="https://try.codecademy.com/learn-python-3">codeacademy</a> or <a href="https://automatetheboringstuff.com/">Automate the boring stuff with python</a> to learn)</li>
+<li>OpenAI API key - can sign on <a href="https://platform.openai.com/docs/quickstart">OpenAI’s webpage</a> and receive $5 dollar credit.</li>
+<li>Sign up for <a href="https://replit.com/">Replit</a> (free account).</li>
+</ol>
+<p><strong>How to get started:</strong></p>
+<ol>
+<li><a href="https://replit.com/">Fork</a> our Replit to use in your account: <a href="https://replit.com/@JayChiarella1/Basic-QA-with-ZD-help-center-bot#main.py">https://replit.com/@JayChiarella1/Basic-QA-with-ZD-help-center-bot#main.py</a></li>
+<li>Create an <a href="https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key">OpenAI API key</a>.</li>
+<li>In your forked Replit, scroll under the “tools” section at the bottom left -> click “secrets” and add your OpenAI API key with the key <em>OPENAI_API_KEY</em> (has to be exact) and the value from your key in your OpenAI account.</li>
+<li>Go back to your Replit and click run!</li>
+</ol>
+<p>If you run into any trouble or would like help, please feel free to email us at <a href="mailto:hello@wiselydesk.com">hello@wiselydesk.com</a> - we’re happy to spread some knowledge here!</p>
+<h3 id="outro">Outro</h3>
+<p>We hope you learned a thing or two. We’ll have a discord server up and running soon, so you can ask us further question if something wasn’t clear or if you want to learn more!</p>
+    </div><div class="my-24 text-center">
+      <a href="/blog" class="rounded-md bg-gray-100 px-5 py-3 transition hover:bg-gray-200">← Back to Blog</a>
+    </div>
+</div>
+    <footer class="mt-16 bg-slate-100" aria-labelledby="footer-heading"><hr/><h2 id="footer-heading" class="sr-only">Footer</h2><div class="mx-auto max-w-7xl px-6 pt-20 pb-8 lg:px-8"><div class="xl:grid xl:grid-cols-3 xl:gap-8"><div class="space-y-8"><p class="h-7 text-slate-500 opacity-80"><span class="font-bold text-slate-800">Wisely</span>Desk</p><p class="text-sm leading-6 text-gray-600 opacity-60">Revamp your Help Center CX with AI. Get instant answers about your entire knowledge base - faster than typing out your questions.</p><div class="flex space-x-6"><a href="https://twitter.com/wiselydesk" class="text-gray-400 hover:text-gray-500"><span class="sr-only">Twitter</span><svg fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg></a><a href="https://github.com/WiselyDesk" class="text-gray-400 hover:text-gray-500"><span class="sr-only">GitHub</span><svg fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg></a><a href="https://www.youtube.com/channel/UCfr2P78VJdfQTynwOLzyuKA" class="text-gray-400 hover:text-gray-500"><span class="sr-only">YouTube</span><svg fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true"><path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"></path></svg></a></div></div><div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0"><div class="md:grid md:grid-cols-2 md:gap-8"><div><h3 class="text-sm font-semibold leading-6 text-gray-900">Solutions</h3><ul role="list" class="mt-6 space-y-4"><li><a href="/demo" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Help Center</a></li></ul></div><div class="mt-10 md:mt-0"><h3 class="text-sm font-semibold leading-6 text-gray-900">Support</h3><ul role="list" class="mt-6 space-y-4"><li><a href="/pricing" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pricing</a></li><li><a href="/contact" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Documentation</a></li><li><a href="/contact" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Guides</a></li><li><a href="/contact" class="text-sm leading-6 text-gray-600 hover:text-gray-900">API Status</a></li></ul></div></div><div class="md:grid md:grid-cols-2 md:gap-8"><div><h3 class="text-sm font-semibold leading-6 text-gray-900">Company</h3><ul role="list" class="mt-6 space-y-4"><li><a href="/about" class="text-sm leading-6 text-gray-600 hover:text-gray-900">About</a></li><li><a href="/blog" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Blog</a></li><li><a href="/careers" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Jobs</a></li><li><a href="/contact" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Press</a></li><li><a href="/contact" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Partners</a></li></ul></div><div class="mt-10 md:mt-0"><h3 class="text-sm font-semibold leading-6 text-gray-900">Legal</h3><ul role="list" class="mt-6 space-y-4"><li><a href="/contact" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Claim</a></li><li><a href="/privacy" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Privacy</a></li><li><a href="/contact" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Terms</a></li></ul></div></div></div></div><div class="mt-8 border-t border-gray-900/10 pt-8"><p class="text-xs leading-5 text-gray-500">Copyright © <!-- -->2023<!-- --> WiselyDesk. All rights reserved.</p></div></div></footer>
+    
+  </body>
+</html>

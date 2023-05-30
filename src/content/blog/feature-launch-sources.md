@@ -6,7 +6,7 @@ image: {
     src: "/sources.png",
     alt: "Sources"
 }
-publishDate: "2023-04-04 08:39"
+publishDate: "2023-04-12 08:39"
 category: "Feature"
 author: "Jay Chiarella"
 tags: [sources, word embedding, new feature]

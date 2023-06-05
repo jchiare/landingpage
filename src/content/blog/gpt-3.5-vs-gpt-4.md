@@ -1,22 +1,24 @@
 ---
 draft: false
-title: "OpenAI GPT-3.5 vs GPT-4"
-snippet: "Comparing OpenAI GPT-3.5 vs GPT-4"
+title: "Comparing GPT-3.5 vs GPT-4"
+snippet: "Comparing GPT-3.5 vs GPT-4"
 image: {
     src: "/gpt-3.5-vs-4-main.png",
     alt: "OpenAI AI models GPT-3.5 vs GPT-4 comparison"
 }
-publishDate: "2023-06-02 08:39"
+publishDate: "2023-06-05 08:39"
 category: "Learning"
 author: "Jay Chiarella"
-tags: [learning, comparison, gpt-3.5-turbo vs gpt-4]
+tags: [learning, gpt-3.5, gpt-4, gpt-3.5-turbo]
 ---
 
 ## Intro 
 
-We share our learnings of using OpenAI's AI models by comparing OpenAI's GPT-3.5 (formally known as GPT-3.5-turbo) and GPT-4 for customer support use cases. 
+We are sharing our learnings of using OpenAI's models by comparing GPT-3.5 (formally known as GPT-3.5-turbo) and GPT-4, for customer support use cases. 
 
-We'll compare them by:
+Initially we used GPT-3.5 and then immediately switched to GPT-4 when it was released. But we ran into a few issues around accuracy and speed. We have since fixed those issues and we wanted to share our learnings.
+
+We will compare GPT-3.5 and GPT-4 by:
 1. [Accuracy](#accuracy)  
 2. [Speed](#speed) 
 3. [Price](#price)
@@ -28,7 +30,7 @@ We'll compare them by:
 #### GPT-3.5
 
 - Released late 2022
-- The AI model powering the standard ChatGPT 
+- Powers ChatGPT 
 - Available via API
 - <q><i>Can understand as well as generate natural language or code</i></q> <sup>\[<a target="_blank" href="https://platform.openai.com/docs/models/overview">source</a>\]</sup>
 
@@ -42,25 +44,25 @@ We'll compare them by:
 
 ## Accuracy
 
-**tl;dr:** GPT-4 can follow the prompt accurately if it's well designed, while a mediocre prompt or GPT-3.5 does not follow the prompt accurately.
+**tl;dr:** GPT-4 can follow the prompt accurately if the prompt is well designed.
 
-Evaluation process:
+To compare GPT-3.5 vs GPT-4, we provided each model with some instructions, some context or knowledge, and a question. Then, we checked if the model ...
+* followed the instructions?
+* accurately answered the question using the context?
+* replied "I don't know" if it didn't know the answer (ie. didn't make things up)?
 
-We provide the AI model with some instructions, some context or knowledge, and a question. Then, we check if the AI model ...
-* follow the instructions?
-* accurately answer the question using the context?
-* say it doesn't know if it does not know the answer?
-
-The prompt is:
+Here is the prompt we used to test the two models. Note that these results are as of June 5th, 2023, and they could change in the future (ie. as OpenAI releases updates ...).
 
 ```
-Only answer the question if you are able to answer it using the given context. Don't use any commonly known facts or external knowledge to answer the question. If you don't know the answer say "I don't know"
+Only answer the question if you are able to answer it using the given context.
+Don't use any commonly known facts or external knowledge to answer the question.
+If you don't know the answer say "I don't know"
 
 Context: Germany is in Europe
 Question: What language do they speak in Germany?
 ```
 
-We hope that the AI model follows the instructions and says **"I don't know"**, despite knowing the commonly known answer that they speak German in Germany. 
+We hope that the AI model follows the instructions and says **"I don't know"**, despite knowing the well-known answer that they speak German in Germany. 
 
 #### GPT-3.5
 
@@ -82,43 +84,46 @@ We see that GPT-3.5 says they speak German in Germany, despite not receiving any
 
 GPT-4 correctly follows the bot instructions and says "I don't know" - even though it is commonly known that they speak German in Germany.
 
-**Effect:** You can expect GPT-4 to follow your prompt / bot instructions. Caveat is that you need to design your prompt well.
+**Effect:** You can expect GPT-4 to follow your prompt / bot instructions. The caveat is that you need to design your prompt well.
 
-**Note:** Each word in the GPT-4 prompt is super important. Below is an example with a prompts that instructs with "other facts" instead of "commonly known facts". GPT-4 then responds that they speak German in Germany, which is not the intended behaviour.
+**Note:** Each word in the GPT-4 prompt is super important. Below is an example with a prompt that uses the phrase "other facts" instead of "commonly known facts". GPT-4 then responds that they speak German in Germany, which is not the intended behaviour.
 
 <div class="text-center">
 <sup >GPT-4 incorrectly says German, due to the mediocre prompt</sup>
 </div>
 <img src="/gpt-4-alt.png" alt="Sources Feature" class="mb-1 rounded mt-0">
 
+Determining *which* phrases work best is more art than science. We recommend trying out as many as you can until you find one that works.
+
 <hr>
 
 ## Speed
 
-To keep it simple, a fully completed AI answer takes:
+**tl;dr**: an AI answer typically takes:
 
-* GPT-3.5 usually ~10 seconds
-* GPT-4 usually ~25 seconds
+* GPT-3.5 -> ~10 seconds
+* GPT-4 -> ~25 seconds
 
-There are a lot of factors that influence this that we won't control or experiment with, such as:
+**Note:** 25 seconds is a long time for a customer to wait for a response. Instead, it’s important to <a target="_blank" href="https://platform.openai.com/docs/api-reference/chat/create#chat/create-stream">stream the AI response</a> using server-sent-events (SSE) so that the first words are sent to your users within a few seconds.
+
+There are a lot of other factors that influence this:
 * Load of OpenAI's APIs (US business hours are generally slower)
 * Complexity of prompt
-* Whether you have your own infrastructure set up with OpenAI (heard it costs 100K)
-
-**Note:** 25 seconds is a long time for a customer to wait for a response. Instead, it's important to stream (sends the words one by one instead of all at once) the AI response so that the first words are sent to your users within a few seconds.
+* Whether you have your own infrastructure set up with OpenAI (we’ve heard it costs 100K)
 
 <hr>
 
 ## Cost
 
-GPT-3.5 costs $0.002 per ~750 words. GPT-4 costs $0.03 per ~750 words in the prompt and $0.06 per ~750 words in the AI answer. 
+- GPT-3.5 -> $0.002 per ~750 word
+- GPT-4 -> $0.03 per ~750 words in the prompt and $0.06 per ~750 words in the AI answer
 
 Reference: <a target="_blank" href="https://openai.com/pricing">OpenAI Pricing Page</a>
 
 <hr>
 
-## Outro
+## Conclusion
 
-We recommend using GPT-4 for any use-case where accuracy of the AI response is crucial. In other use cases, you can use the less accurate GPT-3.5 for a faster speed and cheaper cost.
+We recommend using GPT-4 for any use-case where the accuracy of the AI response is crucial. In other use cases, you can use the less accurate GPT-3.5 for a faster speed and cheaper cost. But also note that OpenAI is constantly releasing updates for GPT-4 so its speed will likely improve in the coming weeks/months.
 
-At WiselyDesk, we think accuracy is crucial to the customer experience. So we only use the GPT-4 and have crafted prompts designed for the customer support use-case. 
+At WiselyDesk, we think accuracy is crucial to the customer experience. So we only use GPT-4 for our prompts which are designed for the customer support use-case. 

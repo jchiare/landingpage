@@ -1,13 +1,13 @@
 ---
 draft: false
 title: "OpenAI GPT-3.5 vs GPT-4"
-snippet: "We're excited to launch a new feature, Sources."
+snippet: "Comparing OpenAI GPT-3.5 vs GPT-4"
 image: {
-    src: "/sources.png",
-    alt: "Sources"
+    src: "/gpt-3.5-vs-4-main.png",
+    alt: "OpenAI AI models GPT-3.5 vs GPT-4 comparison"
 }
 publishDate: "2023-06-02 08:39"
-category: "Feature"
+category: "Learning"
 author: "Jay Chiarella"
 tags: [learning, comparison, gpt-3.5-turbo vs gpt-4]
 ---

@@ -120,6 +120,8 @@ There are a lot of other factors that influence this:
 
 Reference: <a target="_blank" href="https://openai.com/pricing">OpenAI Pricing Page</a>
 
+Roughly speaking, GPT-4 is 10x more expensive than GPT-3.5.
+
 <hr>
 
 ## Conclusion

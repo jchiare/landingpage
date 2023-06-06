@@ -32,13 +32,13 @@ We will compare GPT-3.5 and GPT-4 by:
 - Released late 2022
 - Powers ChatGPT 
 - Available via API
-- <q><i>Can understand as well as generate natural language or code</i></q> <sup>\[<a target="_blank" href="https://platform.openai.com/docs/models/overview">source</a>\]</sup>
+- Able to answer in natural language well, but can't reason or follow instructions well
 
 #### GPT-4
 
 - Released March 2023
 - Available for <a target="_blank" href="https://openai.com/blog/chatgpt-plus">ChatGPT plus subscribers</a> and via API
-- <q><i>Improves on GPT-3.5 and can understand as well as generate natural language or code</i></q> <sup>\[<a target="_blank" href="https://platform.openai.com/docs/models/overview">source</a>\]</sup>
+- Answers in natural language well, can follow well-designed instructions, and has some ability to reason
 
 <hr>
 

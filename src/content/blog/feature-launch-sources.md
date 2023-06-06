@@ -6,7 +6,7 @@ image: {
     src: "/sources.png",
     alt: "Sources"
 }
-publishDate: "2023-04-04 08:39"
+publishDate: "2023-04-12 08:39"
 category: "Feature"
 author: "Jay Chiarella"
 tags: [sources, word embedding, new feature]
@@ -16,7 +16,7 @@ tags: [sources, word embedding, new feature]
 
 Wonder how your WiselyDesk virtual assistant knows more about your product than you?
 
-We've explained <a target="_blank" href="https://www.wiselydesk.com/blog/how-does-wiselydesk-generate-the-answers">how WiselyDesk generates the AI answers</a> - but where does it get the information about your specific proudct? 
+We've explained <a target="_blank" href="https://www.wiselydesk.com/blog/how-does-wiselydesk-generate-the-answers">how WiselyDesk generates the AI answers</a> - but where does it get the information about your specific product? 
 
 With the sources feature, users are provided a link to the sources that informed the AI response about your product.
 

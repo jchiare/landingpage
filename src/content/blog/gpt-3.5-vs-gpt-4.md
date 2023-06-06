@@ -104,12 +104,12 @@ Determining *which* phrases work best is more art than science. We recommend try
 * GPT-3.5 -> ~10 seconds
 * GPT-4 -> ~25 seconds
 
-**Note:** 25 seconds is a long time for a customer to wait for a response. Instead, it’s important to <a target="_blank" href="https://platform.openai.com/docs/api-reference/chat/create#chat/create-stream">stream the AI response</a> using server-sent-events (SSE) so that the first words are sent to your users within a few seconds.
+**Note:** 25 seconds is a long time for a customer to wait for a response. Instead, it’s important to <a target="_blank" href="https://platform.openai.com/docs/api-reference/chat/create#chat/create-stream">stream the AI response</a> so that the first words are sent to your users within a few seconds.
 
 There are a lot of other factors that influence this:
 * Load of OpenAI's APIs (US business hours are generally slower)
 * Complexity of prompt
-* Whether you have your own infrastructure set up with OpenAI (we’ve heard it costs 100K)
+* Whether you purchased dedicated compute infrastructure at OpenAI (we’ve heard it costs 100K)
 
 <hr>
 
@@ -124,6 +124,6 @@ Reference: <a target="_blank" href="https://openai.com/pricing">OpenAI Pricing P
 
 ## Conclusion
 
-We recommend using GPT-4 for any use-case where the accuracy of the AI response is crucial. In other use cases, you can use the less accurate GPT-3.5 for a faster speed and cheaper cost. But also note that OpenAI is constantly releasing updates for GPT-4 so its speed will likely improve in the coming weeks/months.
+We recommend using GPT-4 for any use-case where the accuracy of the AI response is crucial. In other use cases, you can use the less accurate GPT-3.5 for a faster speed and cheaper cost. But also note that OpenAI is constantly releasing updates for GPT-4 so its speed will likely improve in the near future.
 
 At WiselyDesk, we think accuracy is crucial to the customer experience. So we only use GPT-4 for our prompts which are designed for the customer support use-case. 

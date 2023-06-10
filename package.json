@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "TAILWIND_MODE=watch astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "echo $VERCEL_ANALYTICS_ID && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w ."

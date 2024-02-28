@@ -4,25 +4,16 @@ import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
-const menuitems = [
-  {
-    title: "Demo",
-    path: "/demo",
-    class: "flex py-2 font-semibold text-gray-600 hover:text-gray-900 lg:px-3"
-  },
-  {
-    title: "Pricing",
-    path: "/pricing"
-  },
-  {
-    title: "Company",
-    path: "#",
-    children: [
-      { title: "About", path: "/about" },
-      { title: "Careers", path: "/careers" },
-      { title: "Privacy", path: "/privacy" }
-    ]
-  },
+type MenuItem = {
+  title: string;
+  path: string;
+  children?: MenuItem[];
+  class?: string;
+};
+
+const menuitems: MenuItem[] = [
+  {title: "Home", path: "/"},
+  {title: "About", path: "/about" },
   {
     title: "Blog",
     path: "/blog"
@@ -52,20 +43,20 @@ const menuitems = [
           {
             menuitems.map((item, index) => (
               <>
-                {item.children && (
+                {item?.children && (
                   <Dropdown
                     title={item.title}
-                    children={item.children}
+                    children={item?.children}
                     lastItem={index === menuitems.length - 1}
                   />
                 )}
 
-                {!item.children && (
+                {!item?.children && (
                   <li>
                     <a
                       href={item.path}
                       class={
-                        item.class ??
+                        item?.class ??
                         "flex py-2 text-gray-600 hover:text-gray-900 lg:px-3"
                       }>
                       {item.title}

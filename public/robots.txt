@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /app.wiselydesk.com/
+Disallow: /apps.wiselydesk.com/
 Allow: /
 
 Sitemap: https://wiselydesk.com/sitemap-index.xml
